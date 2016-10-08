@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameState">
+      <UniqueIdentifier>{4abc9286-8ef8-4f50-8267-cd54a048da31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameState">
+      <UniqueIdentifier>{86177975-36c5-476d-86c5-1e8a9f02aade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Commands">
+      <UniqueIdentifier>{f294813d-4b01-420a-98f9-e05e5ee66e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Commands">
+      <UniqueIdentifier>{e4c4d5bd-2ae2-4bbf-a9d3-3150fffd6804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Observers">
+      <UniqueIdentifier>{3ec79739-3884-49a9-933d-831bde568491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Observers">
+      <UniqueIdentifier>{6d67e0db-8d97-49f5-883e-c01232f82d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Personnage">
+      <UniqueIdentifier>{d829afc2-9d5b-4f4b-9cfa-9fe48e03498d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Personnage">
+      <UniqueIdentifier>{d06e5590-2b7a-4a43-b70d-12af56d06500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Observers\PersonnageObservers">
+      <UniqueIdentifier>{1a8f1f78-5a8a-4a41-a03a-766fcd3d763b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Observers\PersonnageObservers">
+      <UniqueIdentifier>{015e39f4-04c6-4cbc-a08c-b10c6d0ae823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Personnage\Factory">
+      <UniqueIdentifier>{e0064e9c-cc1d-4f61-bbe6-4829fe20e5ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Personnage\Factory">
+      <UniqueIdentifier>{78a50533-4fcc-409b-8004-052318b1061f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Personnage\Comportement">
+      <UniqueIdentifier>{bd171b30-25b5-42af-83d2-51442874e871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Personnage\Comportement\ComportementState">
+      <UniqueIdentifier>{4e56feb1-d91c-43af-9b02-be8eea602250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Personnage\Comportement">
+      <UniqueIdentifier>{2caddd8a-42ea-46ee-ae7d-254ed40e87f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Personnage\Comportement\ComportementState">
+      <UniqueIdentifier>{1064bd87-e554-4204-b497-02728a7ea864}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleFightState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnage.cpp">
+      <Filter>Source Files\Personnage</Filter>
+    </ClCompile>
+    <ClCompile Include="DeathPersonnageObserver.cpp">
+      <Filter>Source Files\Observers\PersonnageObservers</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdventureState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Comportement.cpp">
+      <Filter>Source Files\Personnage\Comportement</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommand.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleFightState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>Header Files\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnage.h">
+      <Filter>Header Files\Personnage</Filter>
+    </ClInclude>
+    <ClInclude Include="DeathPersonnageObserver.h">
+      <Filter>Header Files\Observers\PersonnageObservers</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdventureState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionChooserFactory.h">
+      <Filter>Header Files\Personnage\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Comportement.h">
+      <Filter>Header Files\Personnage\Comportement</Filter>
+    </ClInclude>
+    <ClInclude Include="ComportementState.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,3 +1,9 @@
+# Remove unwanted dirs and files
+/debug
+/fightgame/debug
+*.sdf
+*.VC.db
+
 # Compiled Object files
 *.slo
 *.lo
