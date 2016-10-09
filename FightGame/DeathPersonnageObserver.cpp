@@ -7,5 +7,6 @@ DeathPersonnageObserver::DeathPersonnageObserver(Personnage & personnage)
 
 void DeathPersonnageObserver::notify()
 {
-
+	if ((*m_subject)->life() == 0 && m_callBack)
+		m_callBack();
 }

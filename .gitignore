@@ -1,5 +1,7 @@
 # Remove unwanted dirs and files
 /debug
+/release
+/fightgame/release
 /fightgame/debug
 *.sdf
 *.VC.db

@@ -21,13 +21,15 @@ void MenuState::update()
 	validModes.emplace(0, std::make_unique<ExitCommand>(*this));
 	validModes.emplace(2, std::make_unique<RunAdventureCommand>(*this));
 	validModes.emplace(1, std::make_unique<RunSingleFightCommand>(*this));
-	
-	timedWriter("Bienvenue dans le super jeu de combat console !", 25);
-	std::cout << std::endl;
+
+	timedWriter("Bienvenue dans le super jeu de combat console !\n", 25);
 	
 	do
 	{
-		std::cout << "Que voulez vous faire ?" << std::endl << "\t[1] Combat rapide" << std::endl << "\t[2] Aventure" << std::endl << "\t[0] Exit" << std::endl;
+		timedWriter("Que voulez vous faire ?", 25);
+		timedWriter("\t[1] Combat rapide", 25);
+		timedWriter("\t[2] Aventure", 25);
+		timedWriter("\t[0] Quitter", 25);
 		std::cin >> choosenMode;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

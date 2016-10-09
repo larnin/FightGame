@@ -146,34 +146,61 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ActionChooserFactory.cpp" />
     <ClCompile Include="AdventureState.cpp" />
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="AttackCommand.cpp" />
+    <ClCompile Include="AttackState.cpp" />
+    <ClCompile Include="BlockCommand.cpp" />
+    <ClCompile Include="BlockState.cpp" />
+    <ClCompile Include="ChargeCommand.cpp" />
+    <ClCompile Include="CommandList.cpp" />
     <ClCompile Include="Comportement.cpp" />
     <ClCompile Include="DeathPersonnageObserver.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="IAActionChooser.cpp" />
+    <ClCompile Include="InputActionChooser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuCommand.cpp" />
     <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="MoveCommand.cpp" />
+    <ClCompile Include="MoveState.cpp" />
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="SingleFightState.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="WaitState.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionChooserFactory.h" />
     <ClInclude Include="AdventureState.h" />
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="AttackCommand.h" />
+    <ClInclude Include="AttackState.h" />
+    <ClInclude Include="BlockCommand.h" />
+    <ClInclude Include="BlockState.h" />
+    <ClInclude Include="ChargeCommand.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="CommandList.h" />
     <ClInclude Include="Comportement.h" />
     <ClInclude Include="ComportementState.h" />
     <ClInclude Include="DeathPersonnageObserver.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="IAActionChooser.h" />
+    <ClInclude Include="InputActionChooser.h" />
     <ClInclude Include="MenuCommand.h" />
     <ClInclude Include="MenuState.h" />
+    <ClInclude Include="MoveCommand.h" />
+    <ClInclude Include="MoveState.h" />
+    <ClInclude Include="NextActionChooser.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Personnage.h" />
+    <ClInclude Include="PersonnageCommand.h" />
     <ClInclude Include="SingleFightState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="WaitState.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,12 +1,14 @@
 #pragma once
 
-#include "Comportement.h"
+class Comportement;
 
 class ComportementState
 {
+	friend Comportement;
+
 public:
 	ComportementState(Comportement & c)
-		: m_comportement(c)
+		: m_comportement(&c)
 	{ }
 
 	ComportementState(const ComportementState &) = delete;
@@ -16,5 +18,5 @@ public:
 	virtual void update() = 0;
 
 protected:
-	Comportement & m_comportement;
+	Comportement * m_comportement;
 };

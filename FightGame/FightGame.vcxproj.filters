@@ -61,6 +61,12 @@
     <Filter Include="Header Files\Personnage\Comportement\ComportementState">
       <UniqueIdentifier>{1064bd87-e554-4204-b497-02728a7ea864}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Commands\PersonnageCommands">
+      <UniqueIdentifier>{beb2d271-c15d-4066-bc2f-2fef89ce0cff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Commands\PersonnageCommands">
+      <UniqueIdentifier>{b29141fb-2d28-4bdf-b0fd-5c536b007be1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,6 +104,45 @@
     </ClCompile>
     <ClCompile Include="Comportement.cpp">
       <Filter>Source Files\Personnage\Comportement</Filter>
+    </ClCompile>
+    <ClCompile Include="InputActionChooser.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
+    </ClCompile>
+    <ClCompile Include="IAActionChooser.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionChooserFactory.cpp">
+      <Filter>Source Files\Personnage\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveState.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveCommand.cpp">
+      <Filter>Source Files\Commands\PersonnageCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandList.cpp">
+      <Filter>Source Files\Commands\PersonnageCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockState.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockCommand.cpp">
+      <Filter>Source Files\Commands\PersonnageCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Source Files\Personnage</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackState.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackCommand.cpp">
+      <Filter>Source Files\Commands\PersonnageCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargeCommand.cpp">
+      <Filter>Source Files\Commands\PersonnageCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitState.cpp">
+      <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +189,48 @@
       <Filter>Header Files\Personnage\Comportement</Filter>
     </ClInclude>
     <ClInclude Include="ComportementState.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="NextActionChooser.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="InputActionChooser.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="IAActionChooser.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveState.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonnageCommand.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveCommand.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandList.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockState.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockCommand.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Header Files\Personnage</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackState.h">
+      <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackCommand.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargeCommand.h">
+      <Filter>Header Files\Commands\PersonnageCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitState.h">
       <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
     </ClInclude>
   </ItemGroup>

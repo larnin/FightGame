@@ -56,6 +56,11 @@ public:
     }
     virtual ~Subject() = default;
 
+	T* operator->()
+	{
+		return static_cast<T*>(this);
+	}
+
 protected:
     void notifyObservers()
     {
