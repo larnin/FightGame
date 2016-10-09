@@ -13,9 +13,11 @@ World::World(unsigned int size)
 
 void World::update()
 {
-	for (Personnage & p : m_personnages)
-		p.update();
+	for (unsigned int i(0); i < m_personnages.size(); i++)
+		m_personnages[i].update();
 	m_time++;
+
+	notifyObservers();
 }
 
 void World::addPersonnage(Personnage & p)
@@ -95,22 +97,23 @@ bool World::attack(const Attack & a)
 {
 	bool touched(false);
 	Team t(a.sender().team());
-	for (Personnage & p : m_personnages)
+	if (a.move() != 0)
+		a.sender().move(a.move());
+	for (unsigned int i(0); i < m_personnages.size(); i++)
 	{
+		Personnage & p(m_personnages[i]);
 		if (p.team() == t)
 			continue;
 		for (unsigned int pos : a.targets())
 		{
 			if (p.pos() == pos)
 			{
-				p.damage(a.sender(), a.power());
 				p.move(a.knockback());
+				p.damage(a.sender(), a.power());
 				touched = true;
 				break;
 			}
 		}
 	}
-	if (a.move() != 0)
-		a.sender().move(a.move());
 	return touched;
 }

@@ -2,9 +2,10 @@
 
 #include "Personnage.h"
 #include "Attack.h"
+#include "Observer.h"
 #include <vector>
 
-class World
+class World : public Subject<World>
 {
 public:
 	World(unsigned int size);

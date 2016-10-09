@@ -37,12 +37,6 @@
     <Filter Include="Header Files\Personnage">
       <UniqueIdentifier>{d06e5590-2b7a-4a43-b70d-12af56d06500}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Observers\PersonnageObservers">
-      <UniqueIdentifier>{1a8f1f78-5a8a-4a41-a03a-766fcd3d763b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Observers\PersonnageObservers">
-      <UniqueIdentifier>{015e39f4-04c6-4cbc-a08c-b10c6d0ae823}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Personnage\Factory">
       <UniqueIdentifier>{e0064e9c-cc1d-4f61-bbe6-4829fe20e5ab}</UniqueIdentifier>
     </Filter>
@@ -89,9 +83,6 @@
     </ClCompile>
     <ClCompile Include="Personnage.cpp">
       <Filter>Source Files\Personnage</Filter>
-    </ClCompile>
-    <ClCompile Include="DeathPersonnageObserver.cpp">
-      <Filter>Source Files\Observers\PersonnageObservers</Filter>
     </ClCompile>
     <ClCompile Include="World.cpp">
       <Filter>Source Files</Filter>
@@ -144,6 +135,12 @@
     <ClCompile Include="WaitState.cpp">
       <Filter>Source Files\Personnage\Comportement\ComportementState</Filter>
     </ClCompile>
+    <ClCompile Include="DeathPersonnageObserver.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="EndTimerObserver.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -169,9 +166,6 @@
     </ClInclude>
     <ClInclude Include="Personnage.h">
       <Filter>Header Files\Personnage</Filter>
-    </ClInclude>
-    <ClInclude Include="DeathPersonnageObserver.h">
-      <Filter>Header Files\Observers\PersonnageObservers</Filter>
     </ClInclude>
     <ClInclude Include="World.h">
       <Filter>Header Files</Filter>
@@ -232,6 +226,12 @@
     </ClInclude>
     <ClInclude Include="WaitState.h">
       <Filter>Header Files\Personnage\Comportement\ComportementState</Filter>
+    </ClInclude>
+    <ClInclude Include="DeathPersonnageObserver.h">
+      <Filter>Header Files\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="EndTimerObserver.h">
+      <Filter>Header Files\Observers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

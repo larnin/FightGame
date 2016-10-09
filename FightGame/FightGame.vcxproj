@@ -157,6 +157,7 @@
     <ClCompile Include="CommandList.cpp" />
     <ClCompile Include="Comportement.cpp" />
     <ClCompile Include="DeathPersonnageObserver.cpp" />
+    <ClCompile Include="EndTimerObserver.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IAActionChooser.cpp" />
     <ClCompile Include="InputActionChooser.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Comportement.h" />
     <ClInclude Include="ComportementState.h" />
     <ClInclude Include="DeathPersonnageObserver.h" />
+    <ClInclude Include="EndTimerObserver.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IAActionChooser.h" />
     <ClInclude Include="InputActionChooser.h" />

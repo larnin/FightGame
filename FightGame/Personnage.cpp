@@ -45,7 +45,8 @@ Personnage::Personnage(const std::string & _name, unsigned int _life, Team _team
 }
 
 Personnage::Personnage(Personnage && p)
-	: m_name(p.m_name)
+	: Subject<Personnage>(std::move(p))
+	, m_name(p.m_name)
 	, m_life(std::move(p.m_life))
 	, m_maxLife(std::move(p.m_maxLife))
 	, m_position(std::move(p.m_position))
@@ -93,8 +94,8 @@ void Personnage::damage(Personnage & sender, unsigned int value)
 	if (typeid(m_comportement.current()) == typeid(BlockState))
 		value /= 3;
 
+	timedWriter(name() + " prend " + std::to_string(value) + " degas par l'attaque de " + sender.name(), 25);
+
     m_life = value > m_life ? 0 : m_life - value;
     notifyObservers();
-
-	timedWriter(name() + " prend " + std::to_string(value) + " degas par l'attaque de " + sender.name(), 25);
 }

@@ -37,12 +37,13 @@ void AttackState::add(const Attack & a, unsigned int delay)
 void AttackState::sendAttack()
 {
 	World & w(m_comportement->personnage().world());
-	if (!w.attack(m_attacks.front().second))
+	Attack a(m_attacks.front().second);
+	m_attacks.erase(m_attacks.begin());
+	if (!w.attack(a))
 	{
 		m_attacks.clear();
 		m_brokenComboTime = 3;
 		timedWriter(m_comportement->personnage().name() + " rate son attaque !", 25);
 		return;
 	}
-	m_attacks.erase(m_attacks.begin());
 }

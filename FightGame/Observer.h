@@ -21,18 +21,18 @@ public:
 
 	virtual void notify() = 0;
 
-	void setCallBack(std::function<void()> callBack)
+	void setCallBack(std::function<void(T&)> callBack)
 	{
 		m_callBack = callBack;
 	}
 
 protected:
 	Subject<T> * m_subject;
-	std::function<void()> m_callBack;
+	std::function<void(T&)> m_callBack;
 };
 
 //------------------------------------
-
+#include <iostream>
 template <typename T>
 class Subject
 {
@@ -54,18 +54,27 @@ public:
         for (auto * o : m_observers)
             o->m_subject = this;
     }
-    virtual ~Subject() = default;
+	virtual ~Subject()
+	{
+		for (auto * o : m_observers)
+			o->m_subject = nullptr;
+	}
 
 	T* operator->()
 	{
 		return static_cast<T*>(this);
 	}
 
+	T& operator*()
+	{
+		return *static_cast<T*>(this);
+	}
+
 protected:
     void notifyObservers()
     {
-        for (auto & o : m_observers)
-            o->notify();
+		for (unsigned int i(0); i < m_observers.size(); i++)
+			m_observers[i]->notify();
     }
 
 private:
@@ -98,20 +107,24 @@ Observer<T>::Observer(const Observer<T> & observer)
     : m_subject(observer.m_subject)
     , m_callBack(observer.m_callBack)
 {
-    m_subject->registerObserver(*this);
+	if(m_subject != nullptr)
+		m_subject->registerObserver(*this);
 }
 
 template <typename T>
 Observer<T> & Observer<T>::operator=(const Observer<T> & observer)
 {
-    m_subject->removeObserver(*this);
+	if (m_subject != nullptr)
+		m_subject->removeObserver(*this);
     m_subject(observer.m_subject);
     m_callBack(observer.m_callBack);
-    m_subject->registerObserver(*this);
+	if (m_subject != nullptr)
+		m_subject->registerObserver(*this);
 }
 
 template <typename T>
 Observer<T>::~Observer()
 {
-    m_subject->removeObserver(*this);
+	if(m_subject != nullptr)
+		m_subject->removeObserver(*this);
 }
